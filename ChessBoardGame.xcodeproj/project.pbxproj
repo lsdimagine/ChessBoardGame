@@ -14,6 +14,11 @@
 		D9670A8E2335DC19002226BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9670A8D2335DC19002226BF /* Assets.xcassets */; };
 		D9670A912335DC19002226BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9670A8F2335DC19002226BF /* LaunchScreen.storyboard */; };
 		D9670A9C2335DC1A002226BF /* ChessBoardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670A9B2335DC1A002226BF /* ChessBoardGameTests.swift */; };
+		D9670AA82335DC57002226BF /* ChessBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670AA72335DC57002226BF /* ChessBoardViewController.swift */; };
+		D9670AAB2335DC67002226BF /* ChessBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670AAA2335DC67002226BF /* ChessBoardController.swift */; };
+		D9670AAE2335DC77002226BF /* ChessBoardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670AAD2335DC77002226BF /* ChessBoardCellView.swift */; };
+		D9670AB12335DC8E002226BF /* ChessBoardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670AB02335DC8E002226BF /* ChessBoardCellViewModel.swift */; };
+		D9670AB42335DC9E002226BF /* ChessBoardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670AB32335DC9E002226BF /* ChessBoardCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		D9670A972335DC1A002226BF /* ChessBoardGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessBoardGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9670A9B2335DC1A002226BF /* ChessBoardGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardGameTests.swift; sourceTree = "<group>"; };
 		D9670A9D2335DC1A002226BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9670AA72335DC57002226BF /* ChessBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardViewController.swift; sourceTree = "<group>"; };
+		D9670AAA2335DC67002226BF /* ChessBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardController.swift; sourceTree = "<group>"; };
+		D9670AAD2335DC77002226BF /* ChessBoardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardCellView.swift; sourceTree = "<group>"; };
+		D9670AB02335DC8E002226BF /* ChessBoardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardCellViewModel.swift; sourceTree = "<group>"; };
+		D9670AB32335DC9E002226BF /* ChessBoardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessBoardCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,11 @@
 		D9670A822335DC18002226BF /* ChessBoardGame */ = {
 			isa = PBXGroup;
 			children = (
+				D9670AB22335DC94002226BF /* models */,
+				D9670AAF2335DC7C002226BF /* viewmodels */,
+				D9670AAC2335DC6E002226BF /* views */,
+				D9670AA92335DC5B002226BF /* controllers */,
+				D9670AA62335DC46002226BF /* viewcontrollers */,
 				D9670A832335DC18002226BF /* AppDelegate.swift */,
 				D9670A852335DC18002226BF /* ViewController.swift */,
 				D9670A872335DC18002226BF /* Main.storyboard */,
@@ -97,6 +112,46 @@
 				D9670A9D2335DC1A002226BF /* Info.plist */,
 			);
 			path = ChessBoardGameTests;
+			sourceTree = "<group>";
+		};
+		D9670AA62335DC46002226BF /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				D9670AA72335DC57002226BF /* ChessBoardViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		D9670AA92335DC5B002226BF /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9670AAA2335DC67002226BF /* ChessBoardController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		D9670AAC2335DC6E002226BF /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D9670AAD2335DC77002226BF /* ChessBoardCellView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		D9670AAF2335DC7C002226BF /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				D9670AB02335DC8E002226BF /* ChessBoardCellViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		D9670AB22335DC94002226BF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D9670AB32335DC9E002226BF /* ChessBoardCellModel.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9670AAE2335DC77002226BF /* ChessBoardCellView.swift in Sources */,
 				D9670A862335DC18002226BF /* ViewController.swift in Sources */,
 				D9670A8C2335DC18002226BF /* ChessBoardGame.xcdatamodeld in Sources */,
+				D9670AB42335DC9E002226BF /* ChessBoardCellModel.swift in Sources */,
+				D9670AAB2335DC67002226BF /* ChessBoardController.swift in Sources */,
+				D9670AA82335DC57002226BF /* ChessBoardViewController.swift in Sources */,
+				D9670AB12335DC8E002226BF /* ChessBoardCellViewModel.swift in Sources */,
 				D9670A842335DC18002226BF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
