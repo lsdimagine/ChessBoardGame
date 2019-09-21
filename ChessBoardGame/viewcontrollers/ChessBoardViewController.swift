@@ -13,7 +13,7 @@ class ChessBoardViewController: UIViewController {
     private let rowCount = 10
     private let colCount = 10
     private let winCount = 4
-    private let cellDimension: CGFloat = 30.0
+    private var cellDimension: CGFloat = 30.0
     private let cellSpacing: CGFloat = 0.0
     private let flowLayout: ChessCollectionViewFlowLayout
     private let collectionView: UICollectionView
@@ -49,6 +49,7 @@ class ChessBoardViewController: UIViewController {
 
         view.addSubview(statusLabel)
 
+        cellDimension = view.bounds.width / CGFloat(colCount)
         flowLayout.itemSize = CGSize(width: cellDimension, height: cellDimension)
         flowLayout.minimumLineSpacing = cellSpacing
         flowLayout.minimumInteritemSpacing = cellSpacing

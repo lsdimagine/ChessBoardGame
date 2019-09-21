@@ -12,7 +12,7 @@ import UIKit
 class ChessBoardCellView: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.blue.withAlphaComponent(0.5).cgColor
         layer.borderWidth = 1.0
         backgroundColor = .lightGray
     }

@@ -121,11 +121,13 @@ class ChessBoardController {
             while (0..<cellModels.count).contains(currentRow) && (0..<cellModels[0].count).contains(currentCol) {
                 if cellModels[currentRow][currentCol].selectedPlayer == player {
                     res += 1
+                } else {
+                    break
                 }
                 currentRow += dir.0
                 currentCol += dir.1
             }
         }
-        return res
+        return res - dirs.count + 1
     }
 }
