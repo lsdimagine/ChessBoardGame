@@ -70,6 +70,8 @@ class ChessBoardViewController: UIViewController {
         ])
         updateStatusLabel()
         collectionView.reloadData()
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRestart))
     }
 
     private func updateStatusLabel() {
@@ -78,6 +80,12 @@ class ChessBoardViewController: UIViewController {
         } else {
             statusLabel.text = boardController.currentPlayer.playText()
         }
+    }
+
+    @objc private func didTapRestart() {
+        boardController.restart()
+        collectionView.reloadData()
+        updateStatusLabel()
     }
 }
 

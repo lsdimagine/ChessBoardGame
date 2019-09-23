@@ -101,6 +101,20 @@ class ChessBoardController {
         }
     }
 
+    func restart() {
+        cellModels.removeAll()
+        for _ in 0..<rowCount {
+            var rowModels = [ChessBoardCellModel]()
+            for _ in 0..<colCount {
+                rowModels.append(ChessBoardCellModel(selectedPlayer: .none))
+            }
+            cellModels.append(rowModels)
+        }
+
+        wonPlayer = .none
+        currentPlayer = .player1
+    }
+
     private func isWonAtRow(_ row: Int, col: Int) -> Bool {
         let horizontalCount = countSameColor(row, col, [(0, 1), (0, -1)])
         if horizontalCount >= winCount {
@@ -131,9 +145,9 @@ class ChessBoardController {
             return 0
         }
 
-        var res = 0
+        var res = 1
         for dir in dirs {
-            var currentRow = row, currentCol = col
+            var currentRow = row + dir.0, currentCol = col + dir.1
             while (0..<cellModels.count).contains(currentRow) && (0..<cellModels[0].count).contains(currentCol) {
                 if cellModels[currentRow][currentCol].selectedPlayer == player {
                     res += 1
@@ -144,6 +158,6 @@ class ChessBoardController {
                 currentCol += dir.1
             }
         }
-        return res - dirs.count + 1
+        return res
     }
 }
