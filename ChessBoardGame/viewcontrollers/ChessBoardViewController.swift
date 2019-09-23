@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class ChessBoardViewController: UIViewController {
-    private let rowCount = 10
-    private let colCount = 10
+    private let rowCount = 20
+    private let colCount = 20
     private let winCount = 4
     private var cellDimension: CGFloat = 30.0
     private let cellSpacing: CGFloat = 0.0

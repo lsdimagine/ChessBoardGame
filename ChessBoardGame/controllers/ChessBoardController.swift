@@ -69,11 +69,21 @@ class ChessBoardController {
         }
 
         var selectedRow = -1
-        for (rowIdx, cellRow) in cellModels.enumerated().reversed() {
-            if cellRow[col].selectedPlayer == .none {
-                selectedRow = rowIdx
-                break
+        var start = 0, end = cellModels.count - 1
+        while start < end {
+            let mid = (start + end) / 2
+            if cellModels[mid][col].selectedPlayer == .none {
+                if mid < cellModels.count - 1 && cellModels[mid + 1][col].selectedPlayer != .none {
+                    start = mid
+                    break
+                }
+                start = mid + 1
+            } else {
+                end = mid - 1
             }
+        }
+        if cellModels[start][col].selectedPlayer == .none {
+            selectedRow = start
         }
 
         if selectedRow == -1 {
@@ -102,10 +112,16 @@ class ChessBoardController {
             return true
         }
 
-        let diacount = countSameColor(row, col, [(1, 1), (-1, -1)])
-        if diacount >= winCount {
+        let diacount1 = countSameColor(row, col, [(1, 1), (-1, -1)])
+        if diacount1 >= winCount {
             return true
         }
+
+        let diacount2 = countSameColor(row, col, [(-1, 1), (1, -1)])
+        if diacount2 >= winCount {
+            return true
+        }
+
         return false
     }
 
