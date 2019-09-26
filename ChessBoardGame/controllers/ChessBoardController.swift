@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Player {
+enum Player: String, CaseIterable {
     case player1
     case player2
     case none
@@ -93,6 +93,7 @@ class ChessBoardController {
             if isWonAtRow(selectedRow, col: col) {
                 // Update wonplayer
                 wonPlayer = currentPlayer
+                CoreDataManager.shared.saveWinCount(forPlayer: wonPlayer.rawValue, count: CoreDataManager.shared.fetchWinCount(forPlayer: wonPlayer.rawValue) + 1)
             } else {
                 // Update to next player to play
                 currentPlayer = (currentPlayer == .player1) ? .player2 : .player1

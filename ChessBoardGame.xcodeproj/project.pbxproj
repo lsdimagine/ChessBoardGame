@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94703D5233C73500097F708 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94703D4233C73500097F708 /* CoreDataManager.swift */; };
 		D9670A842335DC18002226BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670A832335DC18002226BF /* AppDelegate.swift */; };
 		D9670A862335DC18002226BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9670A852335DC18002226BF /* ViewController.swift */; };
 		D9670A892335DC18002226BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9670A872335DC18002226BF /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D94703D4233C73500097F708 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D9670A802335DC18002226BF /* ChessBoardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessBoardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9670A832335DC18002226BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9670A852335DC18002226BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D94703D3233C73460097F708 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				D94703D4233C73500097F708 /* CoreDataManager.swift */,
+			);
+			path = managers;
+			sourceTree = "<group>";
+		};
 		D9670A772335DC17002226BF = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		D9670A822335DC18002226BF /* ChessBoardGame */ = {
 			isa = PBXGroup;
 			children = (
+				D94703D3233C73460097F708 /* managers */,
 				D9670AB22335DC94002226BF /* models */,
 				D9670AAF2335DC7C002226BF /* viewmodels */,
 				D9670AAC2335DC6E002226BF /* views */,
@@ -261,6 +272,7 @@
 				D9670AB42335DC9E002226BF /* ChessBoardCellModel.swift in Sources */,
 				D9670AAB2335DC67002226BF /* ChessBoardController.swift in Sources */,
 				D9670AA82335DC57002226BF /* ChessBoardViewController.swift in Sources */,
+				D94703D5233C73500097F708 /* CoreDataManager.swift in Sources */,
 				D9670AB12335DC8E002226BF /* ChessBoardCellViewModel.swift in Sources */,
 				D9670A842335DC18002226BF /* AppDelegate.swift in Sources */,
 			);

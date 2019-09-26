@@ -76,7 +76,7 @@ class ChessBoardViewController: UIViewController {
 
     private func updateStatusLabel() {
         if boardController.wonPlayer != .none {
-            statusLabel.text = boardController.currentPlayer.wonText()
+            statusLabel.text = "\(boardController.currentPlayer.wonText()) total: \(CoreDataManager.shared.fetchWinCount(forPlayer: boardController.wonPlayer.rawValue))"
         } else {
             statusLabel.text = boardController.currentPlayer.playText()
         }
